@@ -32,6 +32,7 @@ namespace AppMauiJogoDaVelha
                 btn12.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na 1 linha
             else if (btn10.Text == "O" &&
@@ -39,6 +40,7 @@ namespace AppMauiJogoDaVelha
                      btn12.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
 
             //Verificando  se o X ganhou na 2 linha
@@ -47,6 +49,7 @@ namespace AppMauiJogoDaVelha
                 btn22.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na 2 linha
             else if (btn20.Text == "O" &&
@@ -54,6 +57,7 @@ namespace AppMauiJogoDaVelha
                      btn22.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
 
             //Verificando  se o X ganhou na 3 linha
@@ -62,6 +66,7 @@ namespace AppMauiJogoDaVelha
                 btn32.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na 3 linha
             else if (btn30.Text == "O" &&
@@ -69,6 +74,7 @@ namespace AppMauiJogoDaVelha
                      btn32.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
 
             //Verificando  se o X ganhou na D linha
@@ -77,6 +83,7 @@ namespace AppMauiJogoDaVelha
                 btn32.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na D linha
             else if (btn10.Text == "O" &&
@@ -84,6 +91,7 @@ namespace AppMauiJogoDaVelha
                      btn32.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
 
             //Verificando  se o X ganhou na D2 linha
@@ -92,6 +100,7 @@ namespace AppMauiJogoDaVelha
                 btn30.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na D2 linha
             else if (btn12.Text == "O" &&
@@ -99,6 +108,7 @@ namespace AppMauiJogoDaVelha
                      btn30.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
 
             //Verificando  se o X ganhou na 1 coluna
@@ -107,6 +117,7 @@ namespace AppMauiJogoDaVelha
                 btn30.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na 1 Coluna
             else if (btn10.Text == "O" &&
@@ -114,6 +125,7 @@ namespace AppMauiJogoDaVelha
                      btn30.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
 
             //Verificando  se o X ganhou na 2 coluna
@@ -122,6 +134,7 @@ namespace AppMauiJogoDaVelha
                 btn22.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na 2 Coluna
             else if (btn11.Text == "O" &&
@@ -129,6 +142,7 @@ namespace AppMauiJogoDaVelha
                      btn31.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
 
             //Verificando  se o X ganhou na 3 Coluna
@@ -137,6 +151,7 @@ namespace AppMauiJogoDaVelha
                 btn32.Text == "X")
             {
                 DisplayAlert("Parabéns!", "O X ganhou", "Fechar");
+                limpar();
             }
             //Verificando  se a O ganhou na 3 Coluna
             else if (btn12.Text == "O" &&
@@ -144,6 +159,7 @@ namespace AppMauiJogoDaVelha
                      btn32.Text == "O")
             {
                 DisplayAlert("Parabéns!", "A O ganhou", "Fechar");
+                limpar();
             }
             //Verificando se deu Velha
             else if (btn10.Text == "X" ^ btn10.Text == "O" &&
@@ -154,13 +170,44 @@ namespace AppMauiJogoDaVelha
                      btn22.Text == "X" ^ btn22.Text == "O" &&
                      btn30.Text == "X" ^ btn30.Text == "O" &&
                      btn31.Text == "X" ^ btn31.Text == "O" &&
-                     btn32.Text == "X" ^ btn32.Text == "O" &&)
+                     btn32.Text == "X" ^ btn32.Text == "O" )
             {
                 DisplayAlert("Vixi!", "Deu Velha!", "Fechar");
+                limpar();
             }
 
         }// Fecha Button_Clicked
 
+        //Reiniciar o jogo
+        private void limpar()
+        {
+            btn10.Text = "";
+            btn10.IsEnabled = true;
+
+            btn11.Text = "";
+            btn11.IsEnabled = true;
+
+            btn12.Text = "";
+            btn12.IsEnabled = true;
+
+            btn20.Text = "";
+            btn20.IsEnabled = true;
+
+            btn21.Text = "";
+            btn21.IsEnabled = true;
+
+            btn22.Text = "";
+            btn22.IsEnabled = true;
+
+            btn30.Text = "";
+            btn30.IsEnabled = true;
+
+            btn31.Text = "";
+            btn31.IsEnabled = true;
+
+            btn32.Text = "";
+            btn32.IsEnabled = true;
+        }
         
     }
 
